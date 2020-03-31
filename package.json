@@ -1,0 +1,11 @@
+{
+  "name": "cli-table-sandbox",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/MasanoriIwakura/cli-table-sandbox.git",
+  "author": "MasanoriIwakura <hagobutler@yahoo.co.jp>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
