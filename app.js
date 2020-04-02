@@ -1,11 +1,14 @@
-const express = require("express");
-const path = require("path");
+import express from "express";
+import path from "path";
+
 const app = express();
 
 require("dotenv").config();
 
 app.set("port", process.env.PORT || 5050);
-app.get("/", (req, res) => res.send("Hello"));
+app.get("/", (req, res) => {
+  res.send({ "message": "Hello, World!!"});
+});
 
 const port = app.get("port");
 app.listen(port, () =>

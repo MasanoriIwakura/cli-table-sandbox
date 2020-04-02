@@ -6,10 +6,34 @@
   "author": "MasanoriIwakura <hagobutler@yahoo.co.jp>",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js"
+    "dev": "concurrently \"NODE_ENV=development webpack -w --config config/webpack.config.dev.js\" \"nodemon --watch ./dist/server.js\"",
+    "start": "node ./dist/server.js",
+    "flow": "flow",
+    "webpack-dev": "webpack --config config/webpack.config.dev.js"
   },
   "dependencies": {
+    "cli-table3": "^0.6.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "axios": "^0.19.2",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "7",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-regenerator-runtime": "^6.5.0",
+    "concurrently": "^5.1.0",
+    "flow-babel-webpack-plugin": "^1.1.1",
+    "flow-bin": "^0.121.0",
+    "nodemon": "^2.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2"
   }
 }
